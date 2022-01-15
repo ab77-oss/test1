@@ -28,8 +28,11 @@
                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal" >
+                <!-- <a data-toggle="modal" data-target="#loginModal" >
                   <span class="fa fa-sign-in"></span> Login
+                </a> -->
+                <a data-toggle="modal" id="loginM" >
+                    <span class="fa fa-sign-in"></span> Login
                 </a>
             </span>
         </div>
@@ -84,13 +87,13 @@
     <div class="modal fade" id="loginModal" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="logHeader">
                     <h4 class="modal-title">Login</h4>
                     <button type="button" class="close" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="logBody">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4 align-self-center">
@@ -136,7 +139,9 @@
                         data-toggle="tooltip" data-html="true" 
                         title="Or Call us at <br><strong>+852 12345678</strong></br>"
                         data-placement="bottom" >Reserve Table</a> -->
-                        <a data-toggle="modal" data-target="#ReserveModal" class="btn btn-block nav-link btn-warning"
+                        <!-- <a data-toggle="modal" data-target="#ReserveModal" class="btn btn-block nav-link btn-warning"
+                            data-placement="bottom" >Reserve Table</a> -->
+                        <a data-toggle="modal" id="reserveM" class="btn btn-block nav-link btn-warning"
                             data-placement="bottom" >Reserve Table</a>
                     </div>
                 </div>
@@ -304,7 +309,7 @@
         // });
 
         $(document).ready(function(){
-            $('#mycarousel').carousel({interval:2000})
+            $('#mycarousel').carousel({interval:2000});
             $('#carouselButton').click(function(){
                 if ($('#carouselButton').children('span').hasClass('fa-pause')){
                     $('#mycarousel').carousel('pause');
@@ -317,6 +322,16 @@
                     }
                 }
             );
+            $('#loginM').click(function(){
+                $('#loginModal').modal("show");
+            });
+
+            $('#reserveM').click(function(){
+                $('#ReserveModal').modal("show");
+            });
+
+           
+            
         });
 
 

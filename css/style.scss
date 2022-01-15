@@ -60,7 +60,7 @@ body{
 
     .carousel-item{
         height:$carousel-item-height;
-        im{
+        img{
             position:absolute;
             top:0;
             left:0;
@@ -73,4 +73,17 @@ body{
     right:0px;
     position:absolute;
     bottom:0px;
+    z-index:1;
+}
+
+.modal-header{
+    background-color: $background-dark;
+}
+
+.modal-body {
+    background-color: $background-light;
+}
+
+.modal-header > .modal-title{
+    color:white;
 }
