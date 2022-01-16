@@ -76,14 +76,23 @@ body{
     z-index:1;
 }
 
-.modal-header{
-    background-color: $background-dark;
-}
 
-.modal-body {
-    background-color: $background-light;
-}
+.modal-content {
+	border: 0px;
 
-.modal-header > .modal-title{
-    color:white;
+	.modal-body {
+		background: $background-light;
+	}
+
+	.modal-header {
+		background: $background-dark;
+		color: floralwhite;
+		border: 0px;
+
+		.close {
+			color: floralwhite;
+		}
+
+	}
+
 }
